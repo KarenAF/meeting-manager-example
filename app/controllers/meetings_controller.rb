@@ -13,14 +13,14 @@ class MeetingsController < ApplicationController
 
   def create
     @meeting = Meeting.new(
-      name: params['name']
-      address: params['address']
-      start_time: params['start_time']
-      end_time: params['end_time']
+      name: params['name'],
+      address: params['address'],
+      start_time: params['start_time'],
+      end_time: params['end_time'],
       notes: params['notes']
     )
     if @meeting.save
-      redirect_to "/meetings/#{{@meeting.id}}"
+      redirect_to "/meetings/#{@meeting.id}"
     else
       render 'new.html.erb'
     end
