@@ -2,7 +2,15 @@
  <div ng-controller="meetingsCtrl">
 
   <h1><a href="/meetings">All meetings, Json</a></h1>
-  <input ng-model="nameFilter">
+  <div>
+    <label> Filter name: </label>
+    <input ng-model="nameFilter" list = "names">
+
+    <datalist id="names">
+      <option ng-repeat="meeting in meetings">{{ meeting.name }}</option>
+    </datalist>
+
+  </div>
     <div>
       <button ng-click="setOrderAttribute('name')">Order by name</button>
       <button ng-click="setOrderAttribute('address')">Order by address</button>
