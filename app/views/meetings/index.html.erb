@@ -1,6 +1,22 @@
 <div ng-app="app">
  <div ng-controller="meetingsCtrl">
 
+ <h1> Add a new meeting: </h1>
+    <ul id="errors">
+      <li ng-repeat="error in errors">{{ error }}</li>
+    </ul>
+    <div>
+      Name: <input ng-model="inputName">
+      <br>
+      Address: <input ng-model="inputAddress">
+      <br>
+      Start Time: <input ng-model="inputStartTime">
+      End Time: <input ng-model="inputEndTime">
+      <br>
+      Notes: <input ng-model="inputNotes">
+      <button ng-click="addMeeting(inputName, inputAddress, inputStartTime, inputEndTime, inputNotes)">Add meeting</button>
+    </div>
+
   <h1><a href="/meetings">All meetings, Json</a></h1>
   <div>
     <label> Filter name: </label>

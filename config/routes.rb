@@ -5,11 +5,13 @@ Rails.application.routes.draw do
   get '/meetings/new' => 'meetings#new'
   post '/meetings' => 'meetings#create'
   get '/meetings/:id' => 'meetings#show'
-  get '/test' => 'meetings#test'
+
+  get '/test' => 'meetings#test' # I used this to test the angular
 
   namespace :api do
     namespace :v1 do
       get '/meetings' => 'meetings#index'
+      post '/meetings' => 'meetings#create'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
