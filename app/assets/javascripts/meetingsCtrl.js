@@ -12,6 +12,11 @@
   $scope.message = "Hello world";
 
   $scope.setOrderAttribute = function(inputAttribute) {
+    if (inputAttribute !== $scope.orderAttribute) {
+      $scope.isOrderDescending = false;
+    } else {
+      $scope.isOrderDescending = !$scope.isOrderDescending;
+    }
     $scope.orderAttribute = inputAttribute;
   };
 
