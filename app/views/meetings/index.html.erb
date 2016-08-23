@@ -6,6 +6,7 @@
     <div>
       <button ng-click="setOrderAttribute('name')">Order by name</button>
       <button ng-click="setOrderAttribute('address')">Order by address</button>
+      <button ng-click="setOrderAttribute('start_time')">Order by start time</button>
     </div>
   <div ng-repeat="meeting in meetings | filter: {name: nameFilter} | orderBy:orderAttribute">
     <h3><a href="/meetings/{{meeting.id}}"> {{meeting.name}}</a></h3>
