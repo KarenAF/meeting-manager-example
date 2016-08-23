@@ -11,6 +11,9 @@
     });
   $scope.message = "Hello world";
 
+  $scope.setOrderAttribute = function(inputAttribute) {
+    $scope.orderAttribute = inputAttribute;
+  };
 
     window.$scope = $scope;    
   });
