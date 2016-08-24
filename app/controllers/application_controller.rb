@@ -9,4 +9,6 @@ class ApplicationController < ActionController::Base
 
   def restrict_access
     # check if the request has an API key as part of it...
+  end
+
 end
