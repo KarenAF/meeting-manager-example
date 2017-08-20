@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/meetings' => 'meetings#index'
+      get '/meetings' => 'meetings#show'
       post '/meetings' => 'meetings#create'
     end
   end

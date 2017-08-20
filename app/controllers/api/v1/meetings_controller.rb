@@ -4,6 +4,11 @@ class Api::V1::MeetingsController < ApplicationController
     render 'index.json.jbuilder'
   end
 
+  def show
+    @meeting = Meeting.find_by(id: params[:id])
+    render 'show.json.jbuilder'
+  end
+
   def create
     @meeting = Meeting.new(
       name: params[:name],
