@@ -1,16 +1,4 @@
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      get 'tags/index'
-    end
-  end
-
-  namespace :api do
-    namespace :v1 do
-      get 'tags/show'
-    end
-  end
-
   get '/' => 'meetings#index'
 
   get '/meetings' => 'meetings#index'
@@ -23,8 +11,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/meetings' => 'meetings#index'
-      get '/meetings' => 'meetings#show'
+      get '/meetings/:id' => 'meetings#show'
       post '/meetings' => 'meetings#create'
+      get '/tags' => 'tags#index'
+      get '/tags/:id' => 'tags#index'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
