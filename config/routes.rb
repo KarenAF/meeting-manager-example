@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      get 'tags/index'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'tags/show'
+    end
+  end
+
   get '/' => 'meetings#index'
 
   get '/meetings' => 'meetings#index'
