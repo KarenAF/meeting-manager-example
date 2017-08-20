@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       get '/meetings/:id' => 'meetings#show'
       post '/meetings' => 'meetings#create'
       get '/tags' => 'tags#index'
-      get '/tags/:id' => 'tags#index'
+      get '/tags/:id' => 'tags#show'
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
